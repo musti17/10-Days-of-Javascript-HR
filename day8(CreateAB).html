@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a button</title>
+</head>
+<style>
+    #btn{
+        width: 96px;
+        height: 48px;
+        font-size: 24px;
+    }
+</style>
+<body>
+    <button id="btn">0</button>
+</body>
+<script>
+    window.onload = () => {
+        var btn = document.getElementById('btn');
+    
+        btn.addEventListener('click',(e)=>{
+            var clicks = parseInt(e.currentTarget.innerText,0) + 1;
+            e.currentTarget.innerText = clicks;
+        });
+
+    }
+</script>
+</html>
